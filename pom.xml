@@ -11,7 +11,72 @@
     <modules>
         <module>rpc-client</module>
         <module>rpc-common</module>
+        <module>rpc-serialize</module>
+        <module>rpc-remoting</module>
     </modules>
+
+    <properties>
+        <spring-version>4.3.9.RELEASE</spring-version>
+        <netty-version>4.1.9.Final</netty-version>
+        <fastjson-version>1.2.9</fastjson-version>
+        <protobuf-version>3.0.2</protobuf-version>
+        <junit-veresion>4.9</junit-veresion>
+        <hessian-lite-version>3.2.1-fixed-2</hessian-lite-version>
+        <libthrift-version>0.10.0</libthrift-version>
+        <commons-lang3-version>3.5</commons-lang3-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- core -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-version}</version>
+                <type>pom</type>
+            </dependency>
+            <!--network-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-version}</version>
+            </dependency>
+            <!-- serialize framework-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>hessian-lite</artifactId>
+                <version>${hessian-lite-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.thrift</groupId>
+                <artifactId>libthrift</artifactId>
+                <version>${libthrift-version}</version>
+            </dependency>
+            <!--common-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3-version}</version>
+            </dependency>
+
+            <!--test-->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-veresion}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>
