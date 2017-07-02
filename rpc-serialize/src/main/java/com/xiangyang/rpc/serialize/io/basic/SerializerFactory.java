@@ -1,6 +1,7 @@
-package com.xiangyang.rpc.serialize.basic.io;
+package com.xiangyang.rpc.serialize.io.basic;
 
-import com.xiangyang.rpc.serialize.javadefault.io.JavaSerializer;
+import com.xiangyang.rpc.serialize.io.javadefault.JavaSerializer;
+import com.xiangyang.rpc.serialize.io.json.JsonSerializer;
 
 import java.util.HashMap;
 
@@ -14,6 +15,7 @@ public class SerializerFactory {
     static{
         staticSerializerMap = new HashMap();
         staticSerializerMap.put(JavaSerializer.class,new JavaSerializer());
+        staticSerializerMap.put(JsonSerializer.class,new JsonSerializer());
     }
 
     public Serializer getSerializer(Class cls){

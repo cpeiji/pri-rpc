@@ -1,6 +1,6 @@
-package com.xiangyang.rpc.serialize.javadefault.io;
+package com.xiangyang.rpc.serialize.io.javadefault;
 
-import com.xiangyang.rpc.serialize.basic.io.Serializer;
+import com.xiangyang.rpc.serialize.io.basic.Serializer;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;

@@ -1,4 +1,4 @@
-package com.xiangyang.rpc.serialize.basic.io;
+package com.xiangyang.rpc.serialize.io.basic;
 
 import java.io.IOException;
 import java.io.OutputStream;

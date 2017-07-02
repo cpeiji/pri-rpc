@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.Generated;
 import lombok.NoArgsConstructor;
 
+import java.io.File;
 import java.io.Serializable;
 
 /**
@@ -24,4 +25,6 @@ public class PersonModel implements Serializable {
     private String address;
 
     private String phoneNum;
+
+    private File file;
 }
