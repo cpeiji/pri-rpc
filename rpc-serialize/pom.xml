@@ -11,10 +11,15 @@
 
     <artifactId>rpc-serialize</artifactId>
 
-    <modules>
-        <module>rpc-serialize-javadefault</module>
-        <module>rpc-serialize-basic</module>
-    </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

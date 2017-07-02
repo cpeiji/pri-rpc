@@ -1,5 +1,7 @@
 package com.xiangyang.rpc.serialize.basic.io;
 
+import com.xiangyang.rpc.serialize.javadefault.io.JavaSerializer;
+
 import java.util.HashMap;
 
 /**
@@ -11,13 +13,13 @@ public class SerializerFactory {
 
     static{
         staticSerializerMap = new HashMap();
-
-        staticSerializerMap.put(JavaSerializer.)
+        staticSerializerMap.put(JavaSerializer.class,new JavaSerializer());
     }
 
     public Serializer getSerializer(Class cls){
         Serializer serializer;
+        serializer = (Serializer) staticSerializerMap.get(cls);
 
-
+        return serializer;
     }
 }
