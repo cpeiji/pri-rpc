@@ -7,7 +7,7 @@
     <groupId>com.xiangyang</groupId>
     <artifactId>rpc</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>rpc-client</module>
         <module>rpc-common</module>
@@ -16,6 +16,7 @@
     </modules>
 
     <properties>
+        <rpc-version>1.0</rpc-version>
         <spring-version>4.3.9.RELEASE</spring-version>
         <netty-version>4.1.9.Final</netty-version>
         <fastjson-version>1.2.9</fastjson-version>
@@ -24,10 +25,32 @@
         <hessian-lite-version>3.2.1-fixed-2</hessian-lite-version>
         <libthrift-version>0.10.0</libthrift-version>
         <commons-lang3-version>3.5</commons-lang3-version>
+        <lombok-version>1.16.16</lombok-version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--rpc-->
+            <dependency>
+                <groupId>com.xiangyang</groupId>
+                <artifactId>rpc-serialize</artifactId>
+                <version>${rpc-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xiangyang</groupId>
+                <artifactId>rpc-client</artifactId>
+                <version>${rpc-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xiangyang</groupId>
+                <artifactId>rpc-remoting</artifactId>
+                <version>${rpc-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xiangyang</groupId>
+                <artifactId>rpc-common</artifactId>
+                <version>${rpc-version}</version>
+            </dependency>
             <!-- core -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -68,7 +91,12 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3-version}</version>
             </dependency>
-
+            <!--tools-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
             <!--test-->
             <dependency>
                 <groupId>junit</groupId>

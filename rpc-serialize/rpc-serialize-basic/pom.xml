@@ -5,21 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiangyang</groupId>
-        <artifactId>rpc-remoting</artifactId>
+        <artifactId>rpc-serialize</artifactId>
         <version>1.0</version>
     </parent>
-
     <groupId>com.xiangyang</groupId>
-    <artifactId>rpc-remoting-netty</artifactId>
+    <artifactId>rpc-serialize-basic</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>${project.parent.version}</version>
 
     <dependencies>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-veresion}</version>
         </dependency>
     </dependencies>
+
+
+
 
 
 </project>
